@@ -69,6 +69,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Emailotp.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

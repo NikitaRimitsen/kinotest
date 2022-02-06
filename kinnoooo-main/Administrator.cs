@@ -13,7 +13,7 @@ namespace Kinoteatr_bilet
     public partial class Administrator : Form
     {
 
-        static string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nikit\source\repos\kinnoooo\AppData\Kino_DB.mdf;Integrated Security=True";
+        static string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nikit\source\repos\kinotest\kinnoooo-main\AppData\Kino_DB.mdf;Integrated Security=True";
         /*Надо менять            ↑ ↑ ↑ ↑ ↑ ↑ ↑  вот это, если ты пересел за другой комп!!!!!!!!!*/
         SqlConnection connect_to_DB = new SqlConnection(conn);
 
@@ -322,7 +322,9 @@ namespace Kinoteatr_bilet
             aasta_txt.Text = "";
             poster_txt.Text = "";
             //save.FileName = "";
-            poster.Image = Image.FromFile("../../Posterid/ezik.jpg");
+
+            poster.Visible = false;
+            //poster.Image = Image.FromFile("../../Posterid/ezik.jpg");
 
         }
 

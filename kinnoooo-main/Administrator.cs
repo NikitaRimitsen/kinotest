@@ -23,7 +23,6 @@ namespace Kinoteatr_bilet
         Button film_uuenda;
         Button film_kustuta;
         Button film_insert;
-        int Id_film;
         public Administrator()
         {
             this.ClientSize = new System.Drawing.Size(720, 500);
@@ -49,6 +48,18 @@ namespace Kinoteatr_bilet
                 BackColor = Color.LightYellow
             };
             piletinaita.Click += Piletinaita_Click;
+
+
+            Button vexod = new Button
+            {
+                Text = "Väljund",
+                Location = new System.Drawing.Point(580, 25),//Point(x,y)
+                Height = 40,
+                Width = 100,
+                BackColor = Color.LightYellow
+            };
+            vexod.Click += Vexod_Click;
+
 
             film_uuenda = new Button
             {
@@ -79,8 +90,10 @@ namespace Kinoteatr_bilet
             film_insert.Click += Film_insert_Click;
 
 
-            this.Controls.Add(piletinaita);
 
+
+            this.Controls.Add(piletinaita);
+            this.Controls.Add(vexod);
             this.Controls.Add(film_insert);
             this.Controls.Add(film_uuenda);
             this.Controls.Add(film_kustuta);
@@ -99,6 +112,14 @@ namespace Kinoteatr_bilet
             };
             this.Controls.Add(nimi);
             this.Controls.Add(film);*/
+        }
+
+        private void Vexod_Click(object sender, EventArgs e)
+        {
+            Menu uus_aken = new Menu();//запускает пустую форму
+            uus_aken.StartPosition = FormStartPosition.CenterScreen;
+            uus_aken.Show();
+            this.Hide();
         }
 
         private void Piletinaita_Click(object sender, EventArgs e)
@@ -192,6 +213,8 @@ namespace Kinoteatr_bilet
         TextBox film_txt, aasta_txt, poster_txt;
         PictureBox poster;
         DataGridView dataGridView;
+
+        int Id_film;
         private void Film_uuenda_Click(object sender, EventArgs e)
         {
             if (film_txt.Text != "" && aasta_txt.Text != "" && poster_txt.Text != "" && poster.Image != null)
@@ -295,11 +318,21 @@ namespace Kinoteatr_bilet
         }
         private void DataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM [dbo].[Film] SET Pilt=@pilt", connect_to_DB);
             Id_film = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
             film_txt.Text = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             aasta_txt.Text = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            poster_txt.Text = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-            poster.Image = Image.FromFile(@"C:..\..\Posterid\" + dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+            if (dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString() == "")
+            {
+                poster.Image = Image.FromFile(@"C:..\..\Posterid\ezik.jpg");
+            }
+            else
+            {
+                poster.Image = Image.FromFile(@"C:..\..\Posterid\" + dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+            }
+            //poster_txt.Text = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            
+
             //string v = dataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
             //comboBox1.SelectedIndex = Int32.Parse(v) - 1;
         }

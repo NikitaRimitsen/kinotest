@@ -137,6 +137,7 @@
     <Content Include="image\zvedvoine.png" />
     <Content Include="Piletid\piletid.txt" />
     <Content Include="Posterid\Avatari.jpg" />
+    <Content Include="Posterid\ezik.jpg" />
     <Content Include="texte\Info_text_zal.txt" />
     <Content Include="texte\Pravila_zal.txt" />
     <Content Include="zapisfilma\Film.txt" />

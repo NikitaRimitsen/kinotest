@@ -162,7 +162,7 @@ namespace Kinoteatr_bilet
 
         private void menuAdmin(object sender, EventArgs e)
         {
-            Administrator uus_okno = new Administrator();//запускает пустую форму
+            Login uus_okno = new Login();//запускает пустую форму
             uus_okno.StartPosition = FormStartPosition.CenterScreen;
             uus_okno.Show();
             this.Hide();

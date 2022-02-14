@@ -23,6 +23,9 @@ namespace Kinoteatr_bilet
         Button film_uuenda;
         Button film_kustuta;
         Button film_insert;
+        Label lbl1;
+        Label lbl2;
+        Label lbl3;
         public Administrator()
         {
             this.ClientSize = new System.Drawing.Size(720, 500);
@@ -39,7 +42,7 @@ namespace Kinoteatr_bilet
             naita.Click += Film_naita_Click;
 
 
-            Button piletinaita = new Button
+            /*Button piletinaita = new Button
             {
                 Text = "PiletiNaita",
                 Location = new System.Drawing.Point(160, 25),//Point(x,y)
@@ -47,7 +50,7 @@ namespace Kinoteatr_bilet
                 Width = 100,
                 BackColor = Color.LightYellow
             };
-            piletinaita.Click += Piletinaita_Click;
+            piletinaita.Click += Piletinaita_Click;*/
 
 
             Button vexod = new Button
@@ -89,10 +92,37 @@ namespace Kinoteatr_bilet
             };
             film_insert.Click += Film_insert_Click;
 
+            lbl1 = new Label
+            {
+                Text = "Nimi",
+                Size = new System.Drawing.Size(50, 25),
+                Location = new System.Drawing.Point(400, 75),
+                Font = new Font("Oswald", 8, FontStyle.Bold),
+                Visible = false
+            };
 
+            lbl2 = new Label
+            {
+                Text = "Aasta",
+                Size = new System.Drawing.Size(50, 25),
+                Location = new System.Drawing.Point(400, 100),
+                Font = new Font("Oswald", 8, FontStyle.Bold),
+                Visible = false
+            };
 
+            lbl3 = new Label
+            {
+                Text = "Pilt",
+                Size = new System.Drawing.Size(50, 25),
+                Location = new System.Drawing.Point(400, 125),
+                Font = new Font("Oswald", 8, FontStyle.Bold),
+                Visible = false
+            };
+            //this.Controls.Add(piletinaita);
+            this.Controls.Add(lbl1);
+            this.Controls.Add(lbl2);
+            this.Controls.Add(lbl3);
 
-            this.Controls.Add(piletinaita);
             this.Controls.Add(vexod);
             this.Controls.Add(film_insert);
             this.Controls.Add(film_uuenda);
@@ -135,7 +165,7 @@ namespace Kinoteatr_bilet
             //adapter_p.Fill(dataset_p);
             adapter_p.Fill(tabel_p);
             dataGridView_p.DataSource = tabel_p;
-            dataGridView_p.Location = new System.Drawing.Point(10, 75);
+            dataGridView_p.Location = new System.Drawing.Point(10, 170);
             dataGridView_p.Size = new System.Drawing.Size(400, 200);
 
 
@@ -249,6 +279,10 @@ namespace Kinoteatr_bilet
                 film_insert.Visible = true;
                 film_uuenda.Visible = true;
                 film_kustuta.Visible = true;
+
+                lbl1.Visible = true;
+                lbl2.Visible = true;
+                lbl3.Visible = true;
                 film_txt = new TextBox
                 {
                     Location = new System.Drawing.Point(450, 75),
@@ -312,7 +346,7 @@ namespace Kinoteatr_bilet
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM [dbo].[Film]", connect_to_DB);
             adapter.Fill(tabel);
             dataGridView.DataSource = tabel;
-            dataGridView.Location = new System.Drawing.Point(10, 75);
+            dataGridView.Location = new System.Drawing.Point(10, 170);
             dataGridView.Size = new System.Drawing.Size(400, 200);
             connect_to_DB.Close();
         }

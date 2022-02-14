@@ -134,3 +134,14 @@ C:\Users\nikit\Source\Repos\kinotesta\kinnoooo-main\obj\Debug\Kinoteatr_bilet.cs
 C:\Users\nikit\Source\Repos\kinotesta\kinnoooo-main\obj\Debug\Kinoteatr_bilet.csproj.CoreCompileInputs.cache
 C:\Users\nikit\Source\Repos\kinotesta\kinnoooo-main\obj\Debug\Kinoteatr_bilet.exe
 C:\Users\nikit\Source\Repos\kinotesta\kinnoooo-main\obj\Debug\Kinoteatr_bilet.pdb
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.csprojAssemblyReference.cache
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.Properties.Resources.resources
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.csproj.GenerateResource.cache
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.exe
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\obj\Debug\Kinoteatr_bilet.pdb
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\bin\Debug\AppData\Kino_DB.mdf
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\bin\Debug\AppData\Kino_DB_log.ldf
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\bin\Debug\Kinoteatr_bilet.exe.config
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\bin\Debug\Kinoteatr_bilet.exe
+C:\Users\nikit\Source\Repos\kinotestda\kinnoooo-main\bin\Debug\Kinoteatr_bilet.pdb

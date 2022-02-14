@@ -158,6 +158,9 @@ namespace Kinoteatr_bilet
             uus_aken.StartPosition = FormStartPosition.CenterScreen;
             uus_aken.Show();
             this.Hide();
+
+
+            
         }
 
         private void menuAdmin(object sender, EventArgs e)
@@ -166,6 +169,11 @@ namespace Kinoteatr_bilet
             uus_okno.StartPosition = FormStartPosition.CenterScreen;
             uus_okno.Show();
             this.Hide();
+
+            /*Administrator uus_aken = new Administrator();//запускает пустую форму
+            uus_aken.StartPosition = FormStartPosition.CenterScreen;
+            uus_aken.Show();
+            this.Hide();*/
         }
 
         private void Afisha_DoubleClick(object sender, EventArgs e)
